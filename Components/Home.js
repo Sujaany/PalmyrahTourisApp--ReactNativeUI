@@ -78,7 +78,7 @@ export default class Home extends Component {
               fontStyle: 'normal',
               fontSize: 15,
               textAlign: 'right',
-              color: '#AB7362',
+              color: '#A13D2D',
               marginLeft:100
               
             }}>
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
     fontFamily: 'Georgia',
     textAlign: 'center',
-    color: '#AB7362',
+    color: '#A13D2D',
     // textShadowOffset: {width: 5, height: 4},
     textShadowRadius: 5,
   },
@@ -131,14 +131,14 @@ const styles = StyleSheet.create({
     marginTop: 15,
     fontFamily: 'Georgia',
     textAlign: 'center',
-    color: '#AB7362',
+    color: '#A13D2D',
     textShadowRadius: 5,
   },
   title: {
     fontSize: 18,
     marginTop: 15,
     fontFamily: 'Georgia',
-    color: '#AB7362',
+    color: '#A13D2D',
     alignItems: 'flex-start',
     marginRight:100,
     textShadowRadius: 5,
@@ -151,8 +151,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 15,
     borderWidth: 2,
-    borderColor: '#AB7362',
-    backgroundColor: '#AB7362',
+    borderColor: '#A13D2D',
+    backgroundColor: '#A13D2D',
   },
   buttonText: {
     fontSize: 20,
@@ -172,6 +172,6 @@ const styles = StyleSheet.create({
   buttonTextSignup: {
     fontSize: 14,
     marginTop: 5,
-    color:'#AB7362'
+    color:'#A13D2D'
   },
 });
