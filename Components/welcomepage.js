@@ -19,12 +19,12 @@ export default class WelcomePage extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={{flex: 1, alignItems: 'center'}}>
+        <View style={{flex: 1, alignItems: 'center', justifyContent:'center',}}>
           <ImageBackground
             source={require('../assets/lake.jpg')}
-            style={{height: 368, width: 400}}>
-            <View style={{justifyContent:'center'}} />
-            <Text>gg</Text>
+            style={{height: 368, width: 400,alignItems:'center',justifyContent:'center'}}>
+            <Text style={styles.headerText3}>PALMYARAH HOUSE</Text>
+            <Text style={styles.headerText2}>Tourist Guide</Text>
           </ImageBackground>
         </View>
         <View
@@ -176,14 +176,20 @@ const styles = StyleSheet.create({
     // marginRight:100,
     textShadowRadius: 2,
   },
-  SquareShapeView: {
-    width: 230,
-    height: 200,
-    backgroundColor: 'white',
-    alignItems:'center',
-    justifyContent:'center',
-    borderRadius:20,
-    
-
+  headerText2: {
+    fontSize: 16,
+    marginTop: 15,
+    fontFamily: 'Georgia',
+    textAlign: 'center',
+    color: 'white',
+    textShadowRadius: 5,  
+  },
+  headerText3: {
+    fontSize: 25,
+    marginTop: 15,
+    fontFamily: 'Georgia',
+    textAlign: 'center',
+    color: 'white',
+    textShadowRadius: 5,  
   },
 });
