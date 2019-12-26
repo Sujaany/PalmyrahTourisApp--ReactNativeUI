@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {View,StyleSheet,Dimensions,Image,Text,Button,TouchableHighlight} from 'react-native';
-
+import {View,StyleSheet,Dimensions,Image,ImageBackground,Text,Alert,TouchableHighlight, TouchableOpacity} from 'react-native';
+import Footer from './footer';
 
 const deviceWidth = Dimensions.get('window').width;
 const deviceHeight = Dimensions.get('window').height;
@@ -10,11 +10,20 @@ export default class Welcome extends Component {
         return (
             <View style={styles.container}>
             <View style={{flex: 1, alignItems: 'center'}}>
-            <Image
+            <ImageBackground
             source={require('../assets/lake.jpg')}
-            style={{height: 250, width: 400, borderBottomLeftRadius:25, borderBottomRightRadius:25}}></Image>
+            style={{height: 250, width: 400, borderBottomLeftRadius:25, borderBottomRightRadius:25}}/>
             </View>
+
+
             <View style={{flex: 1, alignItems: 'center'}}>
+
+              <View style={{flexDirection:"row", alignItems:'center',justifyContent:'center'}}>
+              <TouchableOpacity>
+              <Image
+            source={require('../assets/user.png')}
+            style={{height: 40, width: 40,paddingTop:30 }}></Image>
+              </TouchableOpacity>
             <TouchableHighlight
             style={styles.button}
             underlayColor="transparent"
@@ -24,6 +33,15 @@ export default class Welcome extends Component {
               }}>
             <Text style={styles.buttonText}>Login</Text>
           </TouchableHighlight>
+          </View>
+
+          <View style={{flexDirection:"row", alignItems:'center',justifyContent:'center'}}>
+              <TouchableOpacity>
+              <Image
+            source={require('../assets/register.png')}
+            style={{height: 40, width: 40,paddingTop:30 }}></Image>
+              </TouchableOpacity>
+
           <TouchableHighlight
             style={styles.button}
             underlayColor="transparent"
@@ -33,6 +51,14 @@ export default class Welcome extends Component {
               }}>
             <Text style={styles.buttonText}>Register</Text>
           </TouchableHighlight>
+          </View>
+
+          <View style={{flexDirection:"row", alignItems:'center',justifyContent:'center'}}>
+              <TouchableOpacity>
+              <Image
+            source={require('../assets/beach-umbrella-and-hammock.png')}
+            style={{height: 40, width: 40,paddingTop:30 }}></Image>
+              </TouchableOpacity>
           <TouchableHighlight
             style={styles.button}
             underlayColor="transparent"
@@ -42,6 +68,14 @@ export default class Welcome extends Component {
               }}>
             <Text style={styles.buttonText}>Resort</Text>
           </TouchableHighlight>
+          </View>
+
+          <View style={{flexDirection:"row", alignItems:'center',justifyContent:'center'}}>
+              <TouchableOpacity>
+              <Image
+            source={require('../assets/kite.png')}
+            style={{height: 40, width: 40,paddingTop:30 }}></Image>
+              </TouchableOpacity>
           <TouchableHighlight
             style={styles.button}
             underlayColor="transparent"
@@ -51,8 +85,15 @@ export default class Welcome extends Component {
               }}>
             <Text style={styles.buttonText}>Kite Surfing</Text>
           </TouchableHighlight>
+          </View>
             </View>
-            <View style={{height: 80, backgroundColor:'#A13D2D' ,borderTopLeftRadius:25, borderTopRightRadius:25}} />
+            <View style={{height: 80, backgroundColor:'#A13D2D' ,borderTopLeftRadius:25, borderTopRightRadius:25,alignItems:'center'}}>
+            {/* <View center><Footer/></View> */}
+            <Image
+            source={require('../assets/place.png')}
+            style={{height: 40, width: 40,paddingTop:30 }}></Image>
+             <Footer/>  
+             </View>       
             </View>
         );
     }
