@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {View} from 'react-native';
 import Home from './Components/home';
 import Welcome from './Components/welcome';
-// import WelcomePage from './Components/welcomepage';
+import Test from './Components/test';
 import Login from './Components/login';
 
 class App extends Component {
@@ -10,9 +10,9 @@ class App extends Component {
     return (
       <View>
 {/* <Home/> */}
-{/* <Welcome/> */}
-{/* <WelcomePage/> */}
-<Login/>
+<Welcome/>
+{/* <Test/> */}
+{/* <Login/> */}
       </View>
     );
   }
