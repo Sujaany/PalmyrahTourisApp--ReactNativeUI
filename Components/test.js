@@ -20,9 +20,12 @@ export default class Test extends Component {
     return (
       <View
   style={{
-    flex: 1,
+    // flex: 1,
     alignItems: 'center',
-    backgroundColor: 'transparent',
+    // backgroundColor: 'transparent',
+    justifyContent:'center',
+    backgroundColor:'red'
+
   }}
 >
   <View
@@ -45,14 +48,14 @@ export default class Test extends Component {
       style={{
         alignItems: 'center',
         justifyContent: 'center',
-        // position: 'absolute',
-        // top: -25,
+        position: 'absolute',
+        top: -25,
         width: 50,
         height: 50,
-        // borderRadius: 50 / 2,
-        // backgroundColor: 'white',
-        // shadowColor: '#000',
-        // shadowOffset: { width: 0, height: 0 },
+        borderRadius: 50 / 2,
+        backgroundColor: 'white',
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 0 },
         shadowOpacity: 0.2,
         shadowRadius: 10,
         elevation: 7,

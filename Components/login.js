@@ -22,6 +22,7 @@ export default class Login extends Component {
   render() {
     return (
       <View style={styles.container}>
+        {/* Header image goes here */}
         <View
           style={{flex: 1, alignItems: 'center', justifyContent: 'flex-start'}}>
           <Image
@@ -65,7 +66,6 @@ export default class Login extends Component {
             onChangeText={text => this.setState({text})}
             value={this.state.text}
           />
-
           <Text
             style={{
               fontStyle: 'normal',

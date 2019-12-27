@@ -8,8 +8,8 @@ import {
   Text,
   Alert,
   TouchableHighlight,
+  TouchableOpacity,
 } from 'react-native';
-
 
 const deviceWidth = Dimensions.get('window').width;
 const deviceHeight = Dimensions.get('window').height;
@@ -18,25 +18,34 @@ export default class Welcome extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={{flex: 1, alignItems: 'center'}}>
+        {/* Lake image goes here */}
+        <View style={{flex: 3, alignItems: 'center'}}>
           <ImageBackground
             source={require('../assets/lake.jpg')}
             style={{
-              height: 280,
+              height: 250,
               width: 405,
               alignItems: 'center',
               justifyContent: 'flex-end',
-              
-              // borderBottomLeftRadius: 20,
-              // borderRadius: 20,
-            }} imageStyle={{ borderBottomLeftRadius: 50,borderBottomRightRadius: 50}}>
+            }}
+            imageStyle={{
+              borderBottomLeftRadius: 50,
+              borderBottomRightRadius: 50,
+            }}>
             <Text style={styles.headerText3}>PALMYRAH HOUSE</Text>
             <Text style={styles.headerText2}>Tourist Guide</Text>
             <Text>{''}</Text>
           </ImageBackground>
         </View>
 
-        <View style={{flex: 1, alignItems: 'center'}}>
+        {/* Button with Icon goes here */}
+        <View
+          style={{
+            flex: 3,
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            top: -50,
+          }}>
           <View
             style={{
               flexDirection: 'row',
@@ -130,18 +139,34 @@ export default class Welcome extends Component {
             </TouchableHighlight>
           </View>
         </View>
+
+        {/* Footer part goes here */}
         <View
           style={{
-            height: 80,
+            // flex:1,
+            height: 65,
             backgroundColor: '#AB7362',
             borderTopLeftRadius: 25,
             borderTopRightRadius: 25,
             alignItems: 'center',
-            zIndex: 99999,
           }}>
+            <TouchableHighlight
+            style={styles.mapbutton}
+            underlayColor="transparent"
+            onPress={() => {
+              Alert.alert('Welcome Palmarah', 'Log in'), [{text: 'Okay'}];
+            }}>
+            <View style={{alignItems:'center'}}>
           <Image
             source={require('../assets/place.png')}
-            style={{height: 40, width: 60, marginBottom: 10,position:'absolute',top:-20}}></Image>
+            style={{
+              height: 50,
+              width: 70,
+              position: 'absolute',
+              top: -40,
+            }}/>
+            </View>
+            </TouchableHighlight>
           {/* <View style={styles.footer}>
             <Text>@2019 info@palmyrah.com</Text>
           </View> */}
@@ -158,7 +183,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FCF4D4',
   },
   button: {
-    height: 40,
+    height: 30,
     width: 200,
     marginTop: 20,
     alignItems: 'center',
@@ -167,6 +192,13 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#AB7362',
     backgroundColor: '#AB7362',
+    zIndex: -1,
+  },
+  mapbutton: {
+    height: 30,
+    width: 200,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   buttonText: {
     fontSize: 20,
@@ -194,16 +226,20 @@ const styles = StyleSheet.create({
   CircleShapeView: {
     width: 50,
     height: 50,
-    borderRadius: 60 / 2,
+    borderRadius: 50 / 2,
     backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
+    position: 'absolute',
+    right: -40,
+    top: -20,
+    // zIndex:-1
   },
   footer: {
     fontSize: 12,
     color: 'white',
     paddingBottom: 10,
-    alignItems:"center",
+    alignItems: 'center',
     color: 'white',
   },
 });
